@@ -4,7 +4,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-<bean id="sim"
-          class="com.learning.springcore.Jio">
-    </bean>
+<bean id="sim" class="com.learning.springcore.Jio"/>
+
+<!--using setter injection to set the bean attributes-->
+<bean id="battery" class="com.learning.springcore.Battery">
+    <property name="capacityInmah" value="5000" />
+    <property name="warrantyYears" value="2" />
+</bean>
+
 </beans>
