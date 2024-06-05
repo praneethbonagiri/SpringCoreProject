@@ -39,5 +39,6 @@ public class Mobile {
         Battery battery = appContext.getBean("battery", com.learning.springcore.Battery.class);
         System.out.println("The battery capacity is " + battery.getCapacityInmah() + " mah");
         System.out.println("The battery warranty is " + battery.getWarrantyYears() + " years");
+        System.out.println("The battery type is " + battery.getTypeOfBattery() + " years");
     }
 }

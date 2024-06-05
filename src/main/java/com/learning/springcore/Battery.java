@@ -5,6 +5,13 @@ public class Battery {
     private int warrantyYears;
     private String typeOfBattery;
 
+    public Battery(int capacityInmah, int warrantyYears, String typeOfBattery) {
+        this.capacityInmah = capacityInmah;
+        this.warrantyYears = warrantyYears;
+        this.typeOfBattery = typeOfBattery;
+        System.out.println("Setting the values from constructor");
+    }
+
     public int getCapacityInmah() {
         return capacityInmah;
     }
@@ -17,8 +24,9 @@ public class Battery {
         return warrantyYears;
     }
 
-    public void setWarrantyYears(int warrentyYears) {
-        this.warrantyYears = warrentyYears;
+    public void setWarrantyYears(int warrantyYears) {
+        this.warrantyYears = warrantyYears;
+        System.out.println("Setting warranty from setter method");
     }
 
     public String getTypeOfBattery() {

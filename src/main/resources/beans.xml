@@ -6,10 +6,15 @@
 
 <bean id="sim" class="com.learning.springcore.Jio"/>
 
-<!--using setter injection to set the bean attributes-->
-<bean id="battery" class="com.learning.springcore.Battery">
-    <property name="capacityInmah" value="5000" />
-    <property name="warrantyYears" value="2" />
-</bean>
+    <!--Using constructor injection to inject values-->
+    <bean id="battery" class="com.learning.springcore.Battery">
+        <constructor-arg name="capacityInmah" value="4000" />
+        <constructor-arg name="warrantyYears" value="1" type="int"/>
+        <constructor-arg name="typeOfBattery" value="Lithium ion" type="java.lang.String"/>
+
+        <property name="warrantyYears" value="2" />
+    </bean>
+    <!--The above use of type is optional, Spring internally converts to the
+        required type, but we want to specify additionally we can specify -->
 
 </beans>
