@@ -1,10 +1,7 @@
 package com.learning.springcore;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 public class Mobile {
-    public static void main(String[] args) {
+
 
         /*
         This is how we normally write java code
@@ -29,16 +26,29 @@ public class Mobile {
         Instead of us creating the objects we can instruct spring to create
         and provide us.
          */
-        ApplicationContext appContext = new ClassPathXmlApplicationContext("beans.xml");
 
-        Sim sim = appContext.getBean("sim", com.learning.springcore.Sim.class);
 
+       Sim sim;
+       Battery battery;
+       String mobileCompany;
+
+    public void setSim(Sim sim) {
+        this.sim = sim;
+    }
+
+    public void setBattery(Battery battery) {
+        this.battery = battery;
+    }
+
+    public void setMobileCompany(String mobileCompany) {
+        this.mobileCompany = mobileCompany;
+    }
+
+    public void call(){
         sim.call();
-        sim.internet();
+    }
 
-        Battery battery = appContext.getBean("battery", com.learning.springcore.Battery.class);
-        System.out.println("The battery capacity is " + battery.getCapacityInmah() + " mah");
-        System.out.println("The battery warranty is " + battery.getWarrantyYears() + " years");
-        System.out.println("The battery type is " + battery.getTypeOfBattery() + " years");
+    public void batteryDetails(){
+        battery.getDetails();
     }
 }

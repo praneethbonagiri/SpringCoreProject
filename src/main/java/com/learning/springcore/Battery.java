@@ -36,4 +36,9 @@ public class Battery {
     public void setTypeOfBattery(String typeOfBattery) {
         this.typeOfBattery = typeOfBattery;
     }
+
+    public void getDetails() {
+        System.out.println("The battery type is : " + typeOfBattery +
+                           " The battery warranty is : " + warrantyYears + " years");
+    }
 }
