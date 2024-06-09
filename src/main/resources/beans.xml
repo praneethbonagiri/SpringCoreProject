@@ -22,5 +22,5 @@
     <!--The above use of type is optional, Spring internally converts to the
         required type, but we want to specify additionally we can specify -->
 
-    <bean id="mobile" class="com.learning.springcore.Mobile" autowire="byType"/>
+    <bean id="mobile" class="com.learning.springcore.Mobile"/>
 </beans>

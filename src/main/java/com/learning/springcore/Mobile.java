@@ -1,5 +1,7 @@
 package com.learning.springcore;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Mobile {
 
 
@@ -32,10 +34,12 @@ public class Mobile {
        Battery battery;
        String mobileCompany;
 
+    @Autowired
     public void setSim(Sim sim) {
         this.sim = sim;
     }
 
+    @Autowired
     public void setBattery(Battery battery) {
         this.battery = battery;
     }
